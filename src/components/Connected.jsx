@@ -23,7 +23,7 @@ const Connected = () => {
 		{
 			label: <TriangleDownIcon />,
 			placeHolder: "City or zip code",
-			props: { ml: 2 },
+			props: {},
 		},
 	];
 
@@ -36,11 +36,10 @@ const Connected = () => {
 					</Heading>
 					<Box display="flex">
 						{inputForm.map(({ label, placeHolder, props }) => (
-							<Box flexBasis="50%">
+							<Box flexBasis="50%" {...props}>
 								<FormControl
 									id="search-key"
-									position="relative"
-									{...props}>
+									position="relative">
 									<Input
 										type="text"
 										placeHolder={placeHolder}
@@ -64,13 +63,12 @@ const Connected = () => {
 							</Box>
 						))}
 					</Box>
-					<Button colorScheme="red" width="100%">
+					<Button colorScheme="red" width="100%" mt={4}>
 						Search
 					</Button>
 				</Box>
 				<Box />
 			</Grid>
-			<Box>Test</Box>
 		</Container>
 	);
 };
