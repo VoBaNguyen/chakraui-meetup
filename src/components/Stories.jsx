@@ -1,4 +1,12 @@
-import { Box, Container, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Container,
+	Grid,
+	GridItem,
+	Heading,
+	Image,
+	Text,
+} from "@chakra-ui/react";
 import React from "react";
 import story1 from "../assets/story-one.jpg";
 import story2 from "../assets/story-two.jpg";
@@ -23,7 +31,7 @@ export default function Stories() {
 		},
 	];
 	return (
-		<Container maxW="container.lg" mt={40}>
+		<Container maxW="container.lg" mt={32}>
 			<Box textAlign="center" maxW="50vw" margin="0 auto">
 				<Heading as="h3" fontSize="2xl">
 					Stories from Meetup
@@ -35,7 +43,7 @@ export default function Stories() {
 			</Box>
 			<Grid templateColumns="repeat(3, 1fr)" gap={4} mt={8}>
 				{stories.map(({ src, title, desc }) => (
-					<Box>
+					<GridItem>
 						<Image src={src} />
 						<Text as="p" fontWeight="bold" mt={4}>
 							{title}
@@ -43,7 +51,7 @@ export default function Stories() {
 						<Text as="span" mt={4} fontSize="sm" color="#a0a0a0">
 							{desc}
 						</Text>
-					</Box>
+					</GridItem>
 				))}
 			</Grid>
 		</Container>

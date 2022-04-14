@@ -7,6 +7,7 @@ import ItWorks from "./components/ItWorks";
 import Upcomming from "./components/Upcomming";
 import Popular from "./components/Popular";
 import Stories from "./components/Stories";
+import Footerbottom from "./components/Footerbottom";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Upcomming />
 				<Popular />
 				<Stories />
+				<Footerbottom />
 			</Box>
 		</div>
 	);
